@@ -1,11 +1,10 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import BtnResume from "./BtnResume";
 import { HashLink } from "react-router-hash-link";
 
 const NavBar = () => {
   const tabs = (
-    <div className="flex flex-col lg:flex-row  gap-2 text-sm font-semibold mr-2 text-white">
+    <div className="flex flex-col lg:flex-row gap-2 text-sm font-semibold mr-2 text-white">
       <HashLink className="hover:text-blue-400" smooth to="#banner">
         Home
       </HashLink>
@@ -21,7 +20,7 @@ const NavBar = () => {
     </div>
   );
   return (
-    <div className="px-12 navbar bg-base-200 bg-opacity-75 fixed top-0 left-0 z-10">
+    <div className="px-2 lg:px-12 navbar bg-base-200 bg-opacity-75 fixed top-0 left-0 z-10">
       <div className="navbar-start">
         <div className="dropdown">
           <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">

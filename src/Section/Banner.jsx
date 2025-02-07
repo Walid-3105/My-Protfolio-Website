@@ -15,12 +15,12 @@ const Banner = () => {
       className="w-11/12 min-h-screen mt-[70px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-5"
     >
       <div className="pt-20">
-        <div className="space-y-5">
+        <div className="space-y-5 min-h-[200px]">
           <h2 className="text-xl text-white">Welcome To My World</h2>
           <h3 className="text-5xl font-bold text-white">Hi, I'm SA AL Walid</h3>
-          <p className="text-2xl font-semibold text-white">
+          <p className="text-xl sm:text-2xl font-semibold text-white">
             Frontend Developer in
-            <span className="pl-2 text-blue-500">
+            <span className="pl-2 font-bold text-lime-400">
               <Typewriter
                 words={texts}
                 loop={true}
@@ -30,7 +30,7 @@ const Banner = () => {
               />
             </span>
           </p>
-          <p>
+          <p className="">
             From responsive design to smooth user interactions, I focus on every
             detail. Let’s collaborate to bring your vision to life. Explore my
             portfolio and see how I can help you achieve your goals.
@@ -59,7 +59,7 @@ const Banner = () => {
         <div className="mt-8 flex gap-2">
           <BtnResume></BtnResume>
 
-          <button className="relative px-6 py-3 font-bold text-white btn rounded-lg overflow-hidden group">
+          <button className="relative glass px-6 py-3 font-bold text-white btn rounded-lg overflow-hidden group">
             <span className="absolute inset-0 border-2 border-transparent rounded-lg group-hover:border-blue-500 transition-all duration-300"></span>
             <span className="absolute inset-0 bg-blue-500 rounded-lg blur-lg opacity-0 group-hover:opacity-100 group-hover:blur-md transition-all duration-300"></span>
             <span className="relative">
@@ -71,7 +71,7 @@ const Banner = () => {
         </div>
       </div>
       <div>
-        <img className="w-[490px]" src={bannerImg} alt="" />
+        <img className="w-[490px]" src={bannerImg} alt="" loading="lazy" />
       </div>
     </div>
   );

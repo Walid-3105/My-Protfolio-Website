@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import NavBar from "../../Shared/NavBar";
 import { Outlet } from "react-router-dom";
 import { FaArrowUp } from "react-icons/fa";
+import { ScrollProgress } from "../../components/magicui/scroll-progress";
 
 const Home = () => {
   const [showScrollButton, setShowScrollButton] = useState(false);
@@ -16,16 +17,12 @@ const Home = () => {
       }
     };
 
-    // Attach event listener
     window.addEventListener("scroll", handleScroll);
-
-    // Cleanup event listener on unmount
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
-  // Scroll to top function
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
@@ -35,6 +32,8 @@ const Home = () => {
   return (
     <div className="w-11/12 mx-auto">
       <NavBar></NavBar>
+      {/* <ScrollProgress className="top-[65px]" /> */}
+
       <Outlet></Outlet>
       {showScrollButton && (
         <button

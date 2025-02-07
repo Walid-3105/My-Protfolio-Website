@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import { FaFacebook, FaInstagram, FaLinkedin } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import toast from "react-hot-toast";
+import { BorderBeam } from "../components/magicui/border-beam";
 const Contact = () => {
   const form = useRef();
 
@@ -91,6 +92,7 @@ const Contact = () => {
                 </li>
               </ul>
             </div>
+            <BorderBeam />
           </div>
 
           {/* Contact Form */}
@@ -99,7 +101,7 @@ const Contact = () => {
               <form ref={form} onSubmit={sendEmail}>
                 <div className="form-control mb-4">
                   <label htmlFor="name" className="label">
-                    <span className="label-text text-gray-600">Name</span>
+                    <span className="label-text text-white">Name</span>
                   </label>
                   <input
                     type="text"
@@ -111,7 +113,7 @@ const Contact = () => {
                 </div>
                 <div className="form-control mb-4">
                   <label htmlFor="email" className="label">
-                    <span className="label-text text-gray-600">Email</span>
+                    <span className="label-text text-white">Email</span>
                   </label>
                   <input
                     type="email"
@@ -123,7 +125,7 @@ const Contact = () => {
                 </div>
                 <div className="form-control mb-4">
                   <label htmlFor="message" className="label">
-                    <span className="label-text text-gray-600">Message</span>
+                    <span className="label-text text-white">Message</span>
                   </label>
                   <textarea
                     id="message"
@@ -133,8 +135,14 @@ const Contact = () => {
                     className="textarea textarea-bordered w-full"
                   ></textarea>
                 </div>
-                <button type="submit" className="btn btn-primary w-full">
-                  Send Message
+
+                <button
+                  type="submit"
+                  className="relative w-full glass px-6 py-3 font-bold text-white btn rounded-lg overflow-hidden group"
+                >
+                  <span className="absolute inset-0 border-2 border-transparent rounded-lg group-hover:border-blue-500 transition-all duration-300"></span>
+                  <span className="absolute inset-0 bg-blue-500 rounded-lg blur-lg opacity-0 group-hover:opacity-100 group-hover:blur-md transition-all duration-300"></span>
+                  <span className="relative">Send Message</span>
                 </button>
               </form>
             </div>
